@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Rafiq - Asisten Info Halaqah Ilmu Al-Hikmah berbasis Cloudflare Workers AI">
+  <title>Rafiq · Asisten Info Halaqah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="avatar-wrap">
+      <div class="avatar" aria-hidden="true">R</div>
+      <span class="status-dot" title="Online"></span>
+    </div>
+    <div class="info">
+      <h1>Rafiq</h1>
+      <p>Asisten Info Halaqah Ilmu Al-Hikmah</p>
+    </div>
+  </header>
+
+  <main id="chat" role="log" aria-live="polite"></main>
+
+  <section id="cepat" aria-label="Pertanyaan cepat">
+    <button type="button" data-q="Kajian pekan ini jadwalnya kapan?">📅 Jadwal Pekan Ini</button>
+    <button type="button" data-q="Bagaimana cara mendaftar kelas tahsin?">📝 Pendaftaran</button>
+    <button type="button" data-q="Di mana link rekaman kajian?">🎥 Rekaman</button>
+    <button type="button" data-q="Siapa kontak admin halaqah?">👤 Kontak Admin</button>
+  </section>
+
+  <form id="form">
+    <textarea
+      id="input"
+      rows="1"
+      maxlength="500"
+      placeholder="Ketik pertanyaan seputar kajian..."
+      aria-label="Ketik pertanyaan"></textarea>
+    <button id="kirim" type="submit" aria-label="Kirim pesan">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+      </svg>
+    </button>
+  </form>
+
+  <footer>
+    <span>Jawaban dibuat AI dan bisa keliru. Jangan kirim data pribadi.</span>
+    <button id="hapus" type="button">Hapus percakapan</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
